@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="300" style="opacity: 0.5 !important;" viewBox="0 0 1440 300">
+  <defs>
+    <linearGradient id="background-image_4-a" x1="100%" x2="44.445%" y1="10.672%" y2="66.897%">
+      <stop offset="0%" stop-color="#5FEBFF"/>
+      <stop offset="100%" stop-color="#7676FF"/>
+    </linearGradient>
+    <linearGradient id="background-image_4-b" x1="100%" x2="69.028%" y1="87.006%" y2="67.232%">
+      <stop offset="0%" stop-color="#54FFA6"/>
+      <stop offset="100%" stop-color="#36F7FF"/>
+    </linearGradient>
+    <linearGradient id="background-image_4-c" x1="99.167%" x2="0%" y1="4.444%" y2="50%">
+      <stop offset="0%" stop-color="#5DB9FF"/>
+      <stop offset="100%" stop-color="#9C43FF"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <polygon fill="url(#background-image_4-a)" points="0 180 1440 0 1440 300 0 300" transform="matrix(-1 0 0 1 1440 0)"/>
+    <polygon fill="url(#background-image_4-b)" points="0 0 1440 0 1440 252 0 44" transform="matrix(1 0 0 -1 0 252)"/>
+    <polygon fill="url(#background-image_4-c)" points="0 146 1440 146 1440 229 0 300" transform="matrix(1 0 0 -1 0 446)"/>
+  </g>
+</svg>

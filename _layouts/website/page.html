@@ -1,0 +1,51 @@
+{% extends template.self %}
+
+{% block page %}
+    {% if file.path == readme.file.path %}
+        {% for part in summary.parts %}
+            <div class="panel panel-default">
+                <div class="list-group">
+                {% for article in part.articles %}
+                    {% if article.path != readme.file.path %}
+                    <a href="{{ article.path|resolveFile }}" class="list-group-item">
+                        <div class="heading-solid"></div>{{ article.title }}
+                    </a>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="content-navigation">
+                    <a href="{{ basePath }}"><img src="/assets/back-icon@2x.png">목록으로 돌아가기</a>
+                </div>
+                <div class="content-title">
+                    <h1>{{ page.title }}</h1>
+                </div>
+                <div class="faq-page">
+                {{ page.content|safe }}
+                </div>
+            </div>
+        </div>
+
+        {% block faq_page_related %}
+            {% if page.related.length > 0 %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ "FAQ_RELATED_ARTICLES"|t }}</h3>
+                </div>
+                <div class="list-group">
+                    {% for related in page.related %}
+                        {% set relatedArticle = getArticleByPath(related) %}
+                        {% if relatedArticle %}
+                        <a href="{{ relatedArticle.path|resolveFile }}" class="list-group-item">{{ relatedArticle.title }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        {% endblock %}
+    {% endif %}
+{% endblock %}
