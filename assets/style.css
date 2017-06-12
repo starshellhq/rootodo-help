@@ -6,7 +6,7 @@ body {
 	background: white;
 }
 
-body .container::after {
+body::after {
 	position: fixed;
 	bottom: 0px;
 	left: 0px;
